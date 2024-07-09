@@ -7,8 +7,12 @@ environment:
   sdk: '>=3.3.1 <4.0.0'
 
 dependencies:
+  firebase_core: ^3.1.1
+  firebase_database: ^11.0.2
   flutter:
     sdk: flutter
+  overlay_loading_progress: ^1.0.1
+  uuid: ^4.4.0
 
 dev_dependencies:
   flutter_test:
