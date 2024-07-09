@@ -1,8 +1,15 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:sbi_flutter_firebase/models/book_model.dart';
 
 class BookRepository {
-  // final DatabaseReference ref = FirebaseDatabase.instance.ref();
+  // TODO: update databaseURL
+  // static final firebaseApp = Firebase.app();
+  // static final rtdb = FirebaseDatabase.instanceFor(
+  //   app: firebaseApp,
+  //   databaseURL: 'https://sbi-flutter-firebase-6f577-default-rtdb.firebaseio.com/',
+  // );
+  // final DatabaseReference ref = rtdb.ref();
 
   // Future<List<BookModel>> getBooks() async {
   //   final snapshot = await ref.child('books').get();
