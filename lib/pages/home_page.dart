@@ -78,17 +78,23 @@ class _HomePageState extends State<HomePage> {
   }
 
   Future<void> fetchBooks() async {
-    //   if (mounted) {
-    //     setState(() {
-    //       books = [];
-    //     });
-    //   }
+    // if (mounted) {
+    //   setState(() {
+    //     books = [];
+    //   });
+    // }
 
-    //   final response = await bookRepository.getBooks();
+    // final response = await bookRepository.getBooks();
+    // response.fold((value) {
     //   if (mounted) {
     //     setState(() {
-    //       books = response;
+    //       books = value;
     //     });
     //   }
+    // }, (value) {
+    //   ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+    //     content: Text(value),
+    //   ));
+    // });
   }
 }

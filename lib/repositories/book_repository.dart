@@ -1,3 +1,4 @@
+import 'package:dartz/dartz.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:sbi_flutter_firebase/models/book_model.dart';
@@ -11,29 +12,46 @@ class BookRepository {
   // );
   // final DatabaseReference ref = rtdb.ref();
 
-  // Future<List<BookModel>> getBooks() async {
-  //   final snapshot = await ref.child('books').get();
-  //   if (snapshot.exists) {
-  //     final temp = (snapshot.value as Map).values.toList();
-  //     return List<BookModel>.from(temp.map((data) => BookModel.fromJson(Map<String, dynamic>.from(data))));
-  //   } else {
-  //     return [];
+  // Future<Either<List<BookModel>, String>> getBooks() async {
+  //   try {
+  //     final snapshot = await ref.child('books').get();
+  //     List<BookModel> list = [];
+  //     if (snapshot.exists) {
+  //       final temp = (snapshot.value as Map).values.toList();
+  //       list = List<BookModel>.from(temp.map((data) => BookModel.fromJson(Map<String, dynamic>.from(data))));
+  //     }
+  //     return Left(list);
+  //   } catch (e) {
+  //     return const Right("Something went wrong");
   //   }
   // }
 
-  // Future<void> storeBook(BookModel book) async {
-  //   if (book.id != null) {
+  // Future<bool> storeBook(BookModel book) async {
+  //   try {
+  //     if (book.id == null) return false;
   //     await ref.child('books').update({book.id!: book.toJson()});
+  //     return true;
+  //   } catch (e) {
+  //     return false;
   //   }
   // }
 
-  // Future<void> updateBook(BookModel book) async {
-  //   if (book.id != null) {
+  // Future<bool> updateBook(BookModel book) async {
+  //   try {
+  //     if (book.id == null) return false;
   //     await ref.child('books').update({book.id!: book.toJson()});
+  //     return true;
+  //   } catch (e) {
+  //     return false;
   //   }
   // }
 
-  // Future<void> deleteBook(String id) async {
-  //   await ref.child('books/$id').remove();
+  // Future<bool> deleteBook(String id) async {
+  //   try {
+  //     await ref.child('books/$id').remove();
+  //     return true;
+  //   } catch (e) {
+  //     return false;
+  //   }
   // }
 }

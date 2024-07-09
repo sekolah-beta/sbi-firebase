@@ -86,26 +86,38 @@ class _EditBookPageState extends State<EditBookPage> {
     //   author: authorController.text,
     // );
 
-    // await bookRepository.updateBook(book);
+    // final isSuccess = await bookRepository.updateBook(book);
     // OverlayLoadingProgress.stop();
     // if (mounted) {
-    //   ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-    //     content: Text('Update ${book.title} successfully!'),
-    //   ));
-    //   Navigator.pop(context, book);
+    //   if (isSuccess) {
+    //     ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+    //       content: Text('Update ${book.title} successfully!'),
+    //     ));
+    //     Navigator.pop(context, book);
+    //   } else {
+    //     ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+    //       content: Text('Update ${book.title} failed!'),
+    //     ));
+    //   }
     // }
   }
 
   Future<void> removeBooks() async {
     // OverlayLoadingProgress.start(context);
 
-    // await bookRepository.deleteBook(widget.book.id!);
+    // final isSuccess = await bookRepository.deleteBook(widget.book.id!);
     // OverlayLoadingProgress.stop();
     // if (mounted) {
-    //   ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-    //     content: Text('Delete ${widget.book.title} successfully!'),
-    //   ));
-    //   Navigator.pop(context, widget.book);
+    //   if (isSuccess) {
+    //     ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+    //       content: Text('Delete ${widget.book.title} successfully!'),
+    //     ));
+    //     Navigator.pop(context, widget.book);
+    //   } else {
+    //     ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+    //       content: Text('Delete ${widget.book.title} failed!'),
+    //     ));
+    //   }
     // }
   }
 }

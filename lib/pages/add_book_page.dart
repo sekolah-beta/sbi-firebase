@@ -73,13 +73,19 @@ class _AddBookPageState extends State<AddBookPage> {
     //   author: authorController.text,
     // );
 
-    // await bookRepository.storeBook(book);
+    // final isSuccess = await bookRepository.storeBook(book);
     // OverlayLoadingProgress.stop();
     // if (mounted) {
-    //   ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-    //     content: Text('Create ${book.title} successfully!'),
-    //   ));
-    //   Navigator.pop(context, book);
+    //   if (isSuccess) {
+    //     ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+    //       content: Text('Create ${book.title} successfully!'),
+    //     ));
+    //     Navigator.pop(context, book);
+    //   } else {
+    //     ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+    //       content: Text('Create ${book.title} failed!'),
+    //     ));
+    //   }
     // }
   }
 }
