@@ -17,7 +17,8 @@ class _EditBookPageState extends State<EditBookPage> {
   final TextEditingController authorController = TextEditingController();
   final GlobalKey<FormState> form = GlobalKey<FormState>();
 
-  String? validator(String? value) => value == '' ? 'Input cannot be empty' : null;
+  String? validator(String? value) =>
+      value == '' ? 'Input cannot be empty' : null;
 
   @override
   void initState() {
@@ -50,7 +51,8 @@ class _EditBookPageState extends State<EditBookPage> {
               TextFormField(
                 controller: titleController,
                 validator: validator,
-                decoration: const InputDecoration(label: Text('Title'), hintText: 'Enter Book Title Here...'),
+                decoration: const InputDecoration(
+                    label: Text('Title'), hintText: 'Enter Book Title Here...'),
               ),
               const SizedBox(
                 height: 10,
@@ -58,7 +60,9 @@ class _EditBookPageState extends State<EditBookPage> {
               TextFormField(
                 controller: authorController,
                 validator: validator,
-                decoration: const InputDecoration(label: Text('Author'), hintText: 'Enter Author Name Here...'),
+                decoration: const InputDecoration(
+                    label: Text('Author'),
+                    hintText: 'Enter Author Name Here...'),
               ),
             ],
           ),
@@ -79,45 +83,45 @@ class _EditBookPageState extends State<EditBookPage> {
   Future<void> editBooks() async {
     if (!form.currentState!.validate()) return;
 
-    // OverlayLoadingProgress.start(context);
-    // BookModel book = BookModel(
-    //   id: widget.book.id,
-    //   title: titleController.text,
-    //   author: authorController.text,
-    // );
+    OverlayLoadingProgress.start(context);
+    BookModel book = BookModel(
+      id: widget.book.id,
+      title: titleController.text,
+      author: authorController.text,
+    );
 
-    // final isSuccess = await bookRepository.updateBook(book);
-    // OverlayLoadingProgress.stop();
-    // if (mounted) {
-    //   if (isSuccess) {
-    //     ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-    //       content: Text('Update ${book.title} successfully!'),
-    //     ));
-    //     Navigator.pop(context, book);
-    //   } else {
-    //     ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-    //       content: Text('Update ${book.title} failed!'),
-    //     ));
-    //   }
-    // }
+    final isSuccess = await bookRepository.updateBook(book);
+    OverlayLoadingProgress.stop();
+    if (mounted) {
+      if (isSuccess) {
+        ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+          content: Text('Update ${book.title} successfully!'),
+        ));
+        Navigator.pop(context, book);
+      } else {
+        ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+          content: Text('Update ${book.title} failed!'),
+        ));
+      }
+    }
   }
 
   Future<void> removeBooks() async {
-    // OverlayLoadingProgress.start(context);
+    OverlayLoadingProgress.start(context);
 
-    // final isSuccess = await bookRepository.deleteBook(widget.book.id!);
-    // OverlayLoadingProgress.stop();
-    // if (mounted) {
-    //   if (isSuccess) {
-    //     ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-    //       content: Text('Delete ${widget.book.title} successfully!'),
-    //     ));
-    //     Navigator.pop(context, widget.book);
-    //   } else {
-    //     ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-    //       content: Text('Delete ${widget.book.title} failed!'),
-    //     ));
-    //   }
-    // }
+    final isSuccess = await bookRepository.deleteBook(widget.book.id!);
+    OverlayLoadingProgress.stop();
+    if (mounted) {
+      if (isSuccess) {
+        ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+          content: Text('Delete ${widget.book.title} successfully!'),
+        ));
+        Navigator.pop(context, widget.book);
+      } else {
+        ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+          content: Text('Delete ${widget.book.title} failed!'),
+        ));
+      }
+    }
   }
 }
