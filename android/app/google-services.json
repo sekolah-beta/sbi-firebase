@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "104972791887",
+    "project_id": "belajar-fullstack-sbi",
+    "storage_bucket": "belajar-fullstack-sbi.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:104972791887:android:df33f2ed07c849a8ec7a3a",
+        "android_client_info": {
+          "package_name": "com.example.sbi_flutter_firebase"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCo4FfLJCxQ0k2Ls13ZpR_PeNateYI9F3k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

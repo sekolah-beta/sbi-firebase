@@ -18,7 +18,8 @@ class _AddBookPageState extends State<AddBookPage> {
   final GlobalKey<FormState> form = GlobalKey<FormState>();
   final Uuid uuid = const Uuid();
 
-  String? validator(String? value) => value == '' ? 'Input cannot be empty' : null;
+  String? validator(String? value) =>
+      value == '' ? 'Input cannot be empty' : null;
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +37,8 @@ class _AddBookPageState extends State<AddBookPage> {
               TextFormField(
                 controller: titleController,
                 validator: validator,
-                decoration: const InputDecoration(label: Text('Title'), hintText: 'Enter Book Title Here...'),
+                decoration: const InputDecoration(
+                    label: Text('Title'), hintText: 'Enter Book Title Here...'),
               ),
               const SizedBox(
                 height: 10,
@@ -44,7 +46,9 @@ class _AddBookPageState extends State<AddBookPage> {
               TextFormField(
                 controller: authorController,
                 validator: validator,
-                decoration: const InputDecoration(label: Text('Author'), hintText: 'Enter Author Name Here...'),
+                decoration: const InputDecoration(
+                    label: Text('Author'),
+                    hintText: 'Enter Author Name Here...'),
               ),
             ],
           ),
@@ -65,27 +69,27 @@ class _AddBookPageState extends State<AddBookPage> {
   Future<void> postBooks() async {
     if (!form.currentState!.validate()) return;
 
-    // OverlayLoadingProgress.start(context);
-    // final id = uuid.v4();
-    // BookModel book = BookModel(
-    //   id: id,
-    //   title: titleController.text,
-    //   author: authorController.text,
-    // );
+    OverlayLoadingProgress.start(context);
+    final id = uuid.v4();
+    BookModel book = BookModel(
+      id: id,
+      title: titleController.text,
+      author: authorController.text,
+    );
 
-    // final isSuccess = await bookRepository.storeBook(book);
-    // OverlayLoadingProgress.stop();
-    // if (mounted) {
-    //   if (isSuccess) {
-    //     ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-    //       content: Text('Create ${book.title} successfully!'),
-    //     ));
-    //     Navigator.pop(context, book);
-    //   } else {
-    //     ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-    //       content: Text('Create ${book.title} failed!'),
-    //     ));
-    //   }
-    // }
+    final isSuccess = await bookRepository.storeBook(book);
+    OverlayLoadingProgress.stop();
+    if (mounted) {
+      if (isSuccess) {
+        ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+          content: Text('Create ${book.title} successfully!'),
+        ));
+        Navigator.pop(context, book);
+      } else {
+        ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+          content: Text('Create ${book.title} failed!'),
+        ));
+      }
+    }
   }
 }
