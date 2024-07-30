@@ -54,6 +54,10 @@ class _HomePageState extends State<HomePage> {
                           }));
                         },
                         child: Text('Register')),
+                    TextButton(
+                      onPressed: () => throw Exception(),
+                      child: const Text("Throw Test Exception"),
+                    ),
                   ],
                 ),
               ),

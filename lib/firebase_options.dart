@@ -51,18 +51,23 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyCo4FfLJCxQ0k2Ls13ZpR_PeNateYI9F3k',
-    appId: '1:104972791887:android:df33f2ed07c849a8ec7a3a',
+    appId: '1:104972791887:android:7ec616569fc44068ec7a3a',
     messagingSenderId: '104972791887',
     projectId: 'belajar-fullstack-sbi',
+    databaseURL: 'https://belajar-fullstack-sbi-default-rtdb.firebaseio.com',
     storageBucket: 'belajar-fullstack-sbi.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
     apiKey: 'AIzaSyC_BBpYrBzQdJEUO3-TvUpE0DVkaTqZCSs',
-    appId: '1:104972791887:ios:ff44b4e2793991c8ec7a3a',
+    appId: '1:104972791887:ios:93289921af7f954cec7a3a',
     messagingSenderId: '104972791887',
     projectId: 'belajar-fullstack-sbi',
+    databaseURL: 'https://belajar-fullstack-sbi-default-rtdb.firebaseio.com',
     storageBucket: 'belajar-fullstack-sbi.appspot.com',
-    iosBundleId: 'com.example.sbiFlutterFirebase',
+    androidClientId: '104972791887-s3upmlq8rtjjaedepvnibgi6mu3p4104.apps.googleusercontent.com',
+    iosClientId: '104972791887-66grbpdchlcvpjucrmufa4ooc5uksu8k.apps.googleusercontent.com',
+    iosBundleId: 'com.sekolahbeta.firebase',
   );
+
 }

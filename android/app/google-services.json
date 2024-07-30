@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "104972791887",
+    "firebase_url": "https://belajar-fullstack-sbi-default-rtdb.firebaseio.com",
     "project_id": "belajar-fullstack-sbi",
     "storage_bucket": "belajar-fullstack-sbi.appspot.com"
   },
@@ -12,7 +13,20 @@
           "package_name": "com.example.sbi_flutter_firebase"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "104972791887-s3upmlq8rtjjaedepvnibgi6mu3p4104.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sbi_flutter_firebase",
+            "certificate_hash": "8b4cca7773a113fdba46fb7728917ab791b70b68"
+          }
+        },
+        {
+          "client_id": "104972791887-btled1qig89f16pq8obht1oqq4se2j42.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyCo4FfLJCxQ0k2Ls13ZpR_PeNateYI9F3k"
@@ -20,7 +34,55 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "104972791887-btled1qig89f16pq8obht1oqq4se2j42.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "104972791887-d878904d7jqiin0flqiii5oq3gko2vdn.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.sbiFlutterFirebase"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:104972791887:android:7ec616569fc44068ec7a3a",
+        "android_client_info": {
+          "package_name": "com.sekolahbeta.firebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "104972791887-btled1qig89f16pq8obht1oqq4se2j42.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCo4FfLJCxQ0k2Ls13ZpR_PeNateYI9F3k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "104972791887-btled1qig89f16pq8obht1oqq4se2j42.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "104972791887-d878904d7jqiin0flqiii5oq3gko2vdn.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.sbiFlutterFirebase"
+              }
+            }
+          ]
         }
       }
     }
